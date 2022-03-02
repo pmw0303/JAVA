@@ -108,12 +108,6 @@ public class Day02_5 {
 		//문제17 : 4개의 정수를 입력받아 내림차순으로 정렬 ??
 		
 		
-		System.out.println("정수 입력 : ");
-		int n1 = scanner.nextInt();
-		System.out.println("정수 입력 : ");
-		int n2 = scanner.nextInt();
-		System.out.println("정수 입력 : ");
-		int n3 = scanner.nextInt();
 		
 		
 		
