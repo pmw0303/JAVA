@@ -1,6 +1,8 @@
 package Day03;
 
-public class Day04_4 {
+import java.util.Scanner;
+
+public class Day03_4 {
 
 	public static void main(String[] args) {
 
@@ -58,18 +60,41 @@ public class Day04_4 {
 //			System.out.println("정지");
 //		}
 
-		char cs = 'A';
-		switch (cs) {
-		case 'A':
-		case 'B':
-			System.out.println("우수 회원");
+//		char cs = 'A';
+//		switch (cs) {
+//		case 'A':
+//		case 'B':
+//			System.out.println("우수 회원");
+//			break;
+//		case 'C':
+//		case 'D':
+//			System.out.println("일반 회원");
+//			break;
+//		default:
+//			System.out.println("손님");
+//		}
+
+		Scanner scanner = new Scanner(System.in);
+
+		System.out.println("국어점수 입력 : ");
+		int score1 = scanner.nextInt();
+		System.out.println("영어점수 입력 : ");
+		int score2 = scanner.nextInt();
+		System.out.println("수학점수 입력 : ");
+		int score3 = scanner.nextInt();
+
+		int avg = (score1 + score2 + score3) / 3;
+		System.out.println("평균 : " + avg);
+
+		switch (avg / 10) {
+		case 9:
+			System.out.println("A");
 			break;
-		case 'C':
-		case 'D':
-			System.out.println("일반 회원");
+		case 8:
+			System.out.println("B");
 			break;
 		default:
-			System.out.println("손님");
+			System.out.println("탈락");
 		}
 
 	}
