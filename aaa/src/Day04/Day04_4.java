@@ -45,8 +45,19 @@ public class Day04_4 {
 		}
 		
 		array[0] = 100; array[1] = 32; array[2] = 25;
-		for(int i = 0 ; i < 3 ; i++) { // 데이터 넣은 후
+		
+		
+		for(int i = 0 ; i < array.length ; i++) { // 데이터 넣은 후   i < 3 -> i < array.length
 			System.out.println(array[i]);
 		}
+		
+		// 향상된 for
+		for(int temp : array) {
+			System.out.println(temp);
+		}
+		
+		
+		
+		
 	}
 }

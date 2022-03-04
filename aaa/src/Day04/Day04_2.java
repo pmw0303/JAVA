@@ -15,15 +15,15 @@ public class Day04_2 {
 //					[조건] : 투입한 금액보다 결제액이 부족하면 결제 취소(금액부족)
 
 		Scanner scanner = new Scanner(System.in);
-		// 재고 수
+		// 재고 수  int[] count = new int[];
 		int cols = 10;
 		int hwas = 10;
 		int cids = 10;
-		// 구매 수
+		// 구매 수  int[] buy = new int[];
 		int colb = 0;
 		int hwab = 0;
 		int cidb = 0;
-		// 가격
+		// 가격    int[] price = new int[];
 		int col = 300;
 		int hwa = 200;
 		int cid = 100;
