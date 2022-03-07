@@ -44,7 +44,7 @@ public class Day05_1 {
 		}
 		for(int i = 0 ; i < 100 ; i++) {
 			
-			if(i < 50) System.out.printf("%3d" , ar3[0][i]);4
+			if(i < 50) System.out.printf("%3d" , ar3[0][i]);
 			
 			else System.out.printf("%3d", ar3[1][i-50]);
 			
