@@ -84,7 +84,8 @@ public class Day04_6 {
 
 				}
 			}
-
+			
+			
 			// 대각선 048 246
 			for (int i = 0; i <= 2; i += 2) {
 				if (board[0].equals(board[4]) && board[4].equals(board[8])) {
@@ -94,9 +95,13 @@ public class Day04_6 {
 					win = board[i];
 				}
 			}
-
+			
+			
+			// 무승부
+			
 			// 게임 종료 ---------------------------------
-
+			
+			
 			if (win.equals("[O]")) {
 				System.err.println("플레이어 승리");
 				break;
@@ -105,9 +110,10 @@ public class Day04_6 {
 				System.err.println("컴퓨터 승리");
 				break;
 			}
+			
 
 		} // 게임판 출력 while
-
+		
 		for (int i = 0; i < board.length; i++) {
 
 			System.out.print(board[i]); // 3배수
