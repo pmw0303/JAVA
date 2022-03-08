@@ -18,6 +18,9 @@ public class Day05_4 {
 		book[1][1] = "";
 		book[1][2] = "aa";
 
+		member[0][0] = "admin";
+		member[0][1] = "0000";
+
 		while (true) { // 맨 처음 while
 
 			System.out.println("도서대여 프로그램");
@@ -68,7 +71,9 @@ public class Day05_4 {
 
 				for (int i = 0; i < member.length; i++) { // for
 
-					if (member[i][0] != null && member[i][0].equals(id) && member[i][1].equals(pw)) { // if 로그인 확인 시작
+					 if (member[i][0] != null && member[i][0].equals(id) && member[i][1].equals(pw)) { // if 로그인
+																												// 확인
+																												// 시작
 
 						System.err.println("알림>> 로그인 성공");
 						logincheck = true;
@@ -143,7 +148,6 @@ public class Day05_4 {
 											if (ch_4 == 1) {
 
 												book[j][1] = "대여중X";
-
 												break;
 											} else {
 												break;
@@ -182,3 +186,82 @@ public class Day05_4 {
 		}
 	}
 }
+
+
+
+
+
+//if (member[0][0].equals("admin") && member[0][1].equals("0000")) {
+//
+//	System.out.println("관리자 모드");
+//	System.out.println("1. 도서등록 | 2. 도서목록 | 3. 도서삭제 | 4. 로그아웃");
+//	System.out.println("선택>> ");
+//
+//	int ch_2_1 = scanner.nextInt();
+//
+//	if (ch_2_1 == 1) { // 도서등록
+//
+//		System.out.println("도서를 등록 하시겠습니까?");
+//		System.out.println("1. 등록 | 2. 등록X ");
+//		int ch2_1_1 = scanner.nextInt();
+//		if (ch2_1_1 == 1) {
+//
+//			for (int j = 0; j < book.length; j++) {
+//
+//				System.out.println("등록할 책 이름 : ");
+//				String e_book = scanner.next();
+//
+//				if (e_book.equals(book[j][0])) {
+//
+//					System.err.println("이미 등록되어 있습니다");
+//					break;
+//				} else {
+//
+//					if (e_book != book[j][0]) {
+//
+//						book[j][0] = e_book;
+//						System.out.println("등록되었습니다");
+//						break;
+//					}
+//
+//				}
+//			}
+//		}
+//
+//	} else if (ch_2_1 == 2) { // 도서목록
+//
+//		for (int j = 0; j < book.length; j++) {
+//
+//			if (book[j][0] != null) {
+//				System.out.printf("%s  ", book[j][0]);
+//			}
+//		}
+//		System.out.println();
+//
+//	} else if (ch_2_1 == 3) { // 도서삭제
+//
+//		System.out.println("도서를 삭제하시겠습니까?");
+//		System.out.println("1. 삭제 | 2. 삭제X ");
+//		int ch_2_1_1 = scanner.nextInt();
+//
+//		if (ch_2_1_1 == 1) {
+//
+//			for (int j = 0; j < book.length; j++) {
+//
+//				System.out.println("삭제할 책 이름 : ");
+//				String d_book = scanner.next();
+//
+//				if (d_book.equals(book[j][0])) {
+//
+//					book[j][0] = null;
+//					System.err.println("삭제되었습니다");
+//					break;
+//				}
+//				System.err.println("책이 존재하지 않습니다");
+//			}
+//		}
+//
+//	} else if (ch_2_1 == 4) { // 로그아웃
+//		break;
+//	}
+//} else
