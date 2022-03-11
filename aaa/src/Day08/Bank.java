@@ -48,9 +48,7 @@ public class Bank {
 					}
 					
 						// 1. 일반회원 메뉴 메소드 호출
-						
-					
-				
+									
 					
 				}else if(ch==3) { // 아이디찾기
 					member.findId();
