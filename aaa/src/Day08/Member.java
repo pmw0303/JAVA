@@ -62,6 +62,9 @@ public class Member {
 		String logIn() {
 			System.out.println("------------------로그인 페이지------------------");
 			System.out.print("아이디 : "); String id = Day08_5.scan.next();
+			if(id.equals("admin")) {
+				return "admin";
+			}
 			System.out.print("비밀번호 : "); String pw = Day08_5.scan.next();
 			
 			for(Member temp : Day08_5.members) {
@@ -102,7 +105,7 @@ public class Member {
 				
 				System.out.println("전화번호 입력 : ");
 				String phone = Day08_5.scan.next();
-
+				
 				for (Member temp : Day08_5.members) {
 
 					if (temp.id != null && temp.name.equals(id) && temp.id.equals(phone)) {
