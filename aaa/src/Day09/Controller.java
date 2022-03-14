@@ -105,19 +105,20 @@ public class Controller {
 					&& temp.getPw().equals(pw)) {
 				int j =0;
 				for(Bank temp2 : Day09_6_은행계좌프로그램.accList) {
-					if(temp != null && temp.getAccNo().equals(받는계좌)) {
+					if(temp2 != null && temp.getAccNo().equals(받는계좌)) {
 						if(temp.getMoney() < 이체금액) {
 							// 잔액부족
 							return 1;
 						}else {
 							Day09_6_은행계좌프로그램.accList[i].setMoney(temp.getMoney()-이체금액);
-							Day09_6_은행계좌프로그램.accList[j].setMoney(temp.getMoney()-이체금액);
+							Day09_6_은행계좌프로그램.accList[j].setMoney(temp2.getMoney()+이체금액);
 							return 2; // 성공
 						}
 					}j++;
 				}// 받는계좌 없음
 //				return 3;
-			} i++;
+			} 
+			i++;
 		}
 		
 		return 4;
