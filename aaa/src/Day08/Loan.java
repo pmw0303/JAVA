@@ -68,7 +68,7 @@ public class Loan {
 			if(temp != null && temp.accountOwner.equals(id)) {
 				for(Loan temp2 : Day08_5.loan) {
 					if(temp2 != null && temp2.loanName.equals(temp.loanName)) {
-						System.out.printf("%s 상품의 상환금: %.2f",temp2.loanName, temp2.loanAmount * temp2.loanInterest);
+						System.out.printf("%s 상품의 상환금: %.2f\n",temp2.loanName, temp2.loanAmount * temp2.loanInterest);
 					}
 				}
 			}
