@@ -53,7 +53,7 @@ public class Day09_6_은행계좌프로그램 {
 				int input = sc.nextInt();
 				
 				boolean result = con.입금(accNo, input);
-				con.입금(accNo, input);
+				
 				if(result) {
 					System.out.println("알림>> 입금 성공");
 					
@@ -71,7 +71,7 @@ public class Day09_6_은행계좌프로그램 {
 				int output = sc.nextInt();
 				
 				int result = con.출금(accNo, pw, output);
-				con.출금(accNo, pw, output);
+				
 				
 				if(result == 1) {
 					System.out.println("알림>> 잔액 부족");

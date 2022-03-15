@@ -80,11 +80,11 @@ public class Controller {
 			if (temp != null && temp.getAccNo().equals(accNo) && temp.getPw().equals(pw)) {
 				if(temp.getMoney() < output)
 				return 1; // 잔액이 부족을 반환
-
 			} else {
 				Day09_6_은행계좌프로그램.accList[i].setMoney(temp.getMoney() - output);
 				return 2; // 출금 성공
 			}
+			i++;
 		}
 		return 3; // 동일한 정보가 아닐 경우 실패를 의미
 		// 해당 계좌번호의 비밀번호가 일치 확인
