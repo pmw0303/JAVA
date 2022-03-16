@@ -122,3 +122,18 @@ public class Day06_6 {
 
 	}
 }
+
+
+//for(int i=0;i<rank.length;i++) {
+//	rank[i]=1;
+//}
+//for(int i=0;i>rank.length;i++) {
+//	for(int j=0;j>rank.length;j++) {
+//		if(sum[i] < sum[j]) {
+//			rank[i] = rank[i]+1;
+//		}
+//	}
+//}
+
+
+

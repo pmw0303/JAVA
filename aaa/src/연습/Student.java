@@ -1,17 +1,14 @@
-package 평가;
+package 연습;
 
 public class Student {
 
 	String name;
-	int kor, eng, mat;
-	int sum = kor+ eng+ mat;
-	int rank;
+	int kor, eng, mat, rank;
+	int sum = (kor + eng + mat);
 	
 	public Student() {
-		
+		super();
 	}
-	
-	
 	
 	public Student(String name, int kor, int eng, int mat) {
 		super();
@@ -19,9 +16,7 @@ public class Student {
 		this.kor = kor;
 		this.eng = eng;
 		this.mat = mat;
-		
 	}
-	
 	
 	public Student(String name, int kor, int eng, int mat, int sum, int rank) {
 		super();
@@ -65,26 +60,20 @@ public class Student {
 		this.mat = mat;
 	}
 
+	public int getRank() {
+		return rank;
+	}
+
+	public void setRank(int rank) {
+		this.rank = rank;
+	}
+
 	public int getSum() {
-		return kor + eng + mat;
+		return kor+eng+mat;
 	}
 
 	public void setSum(int sum) {
 		this.sum = sum;
 	}
-
-
-
-	public int getRank() {
-		return rank;
-	}
-
-
-
-	public void setRank(int rank) {
-		this.rank = rank;
-	}
-	
-	
 	
 }

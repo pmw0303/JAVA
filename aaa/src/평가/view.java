@@ -7,35 +7,105 @@ public class view {
 	public static void main(String[] args) {
 		Scanner sc = new Scanner(System.in);
 		Student[] student = new Student[100];
-		
-		while (true) {
+		int count =0;
+	
+		while(true) {
 			try {
-				System.out.printf("학생");
-				// 점수출력 - 모든 배열
-				int i =0;
-				
-
-				System.out.println("1.등록 2.삭제");
-				int ch = sc.nextInt();
-
-				if (ch == 1) {
-					System.out.println("학생 이름 : "); String name = sc.next();
-					System.out.println("국어 점수 : "); int kor = sc.nextInt();
-					System.out.println("영어 점수 : "); int eng = sc.nextInt();
-					System.out.println("수학 점수 : "); int mat = sc.nextInt();
-					Controller.insert(name, kor, eng, mat);
-					
-				} else if (ch == 2) {
-					System.out.println("삭제할 학생 이름 : ");
-					String name = sc.next();
-					
-					Controller.delete();
-				} else {
-
+				System.out.println("--------------------------------------------------------------------------");
+				System.out.println("\t\t\t성\t적\t표");
+				System.out.println("--------------------------------------------------------------------------");
+				System.out.println("\t번호\t이름\t국어\t영어\t수학\t총점\t평균\t석차");
+				System.out.println("--------------------------------------------------------------------------");
+				int i = 0 ;
+				for(Student temp : student) {
+					if(temp != null) {
+						System.out.printf("\t"+(i+1)+"\t"+student[i].getName()+
+								"\t"+student[i].getKor()+"\t"+student[i].getEng()+"\t"+student[i].getMat()+
+								"\t"+student[i].getSum()+"\t"+"%.2f"+"\t"+ student[i].getRank() +"\n",(double)student[i].getSum()/3);
+						i++;
+					}
 				}
-			} catch (Exception e) {
-
+				System.out.println("--------------------------------------------------------------------------");
+				System.out.println("1. 학생등록 2. 학생삭제 ");
+				System.out.print("선택 : "); int ch = sc.nextInt();
+				if (ch==1) {
+					System.out.print("이름을 입력하세요 : "); String name = sc.next();
+					System.out.print("국어점수를 입력하세요 : "); int kor = sc.nextInt(); // 1~100 외 점수 막아야함
+					System.out.print("영어점수를 입력하세요 : "); int eng = sc.nextInt(); // 1~100 외 점수 막아야함
+					System.out.print("수학점수를 입력하세요 : "); int mat = sc.nextInt(); // 1~100 외 점수 막아야함
+					Student students = new Student(name, kor, eng, mat);
+					int j = 0 ;
+					for ( Student temp : student ) {
+						if( temp == null ) {
+							student[j] = students ;
+							break;
+						}
+						j++;
+					}count++;
+					
+					if (count == 1) {
+						student[count - 1].rank = 1;
+					} else {
+						for (int k = 0; k < count-1 ; k++) {
+							for (int e=0; e < count-1-k ; e++) {
+								if (student[e].getSum() < student[e + 1].getSum()) {
+									Student temp = student[e];
+									student[e] = student[e+1];
+									student[e+1] = temp;
+								}
+							}
+						}
+						for (int k = 0; k < count; k++) {
+							student[k].rank = k + 1;
+						}
+					}
+														
+				} // 학생 등록
+				else if(ch==2) {
+					System.out.println("이름을 입력하세요 : "); String name = sc.next();
+					
+					for(int j=0 ; j<count ; j++ ) {
+						boolean status = student[j].name.equals(name);
+						if(status) {
+							Student[] students = new Student[100];
+							for(int k=0 ; k<students.length ; k++) {
+								if(k<j) {
+									students[k] = student[k];
+								}else if(k > j) {
+									students[k-1] = student[k];
+								}
+							}
+							student = students;
+							count --;
+						}
+					}
+					
+					if (count == 1) {
+						student[count - 1].rank = 1;
+					} else {
+						for (int k = 0; k < count-1 ; k++) {
+							for (int e=0; e < count-1-k ; e++) {
+								if (student[e].getSum() < student[e + 1].getSum()) {
+									Student temp = student[e];
+									student[e] = student[e+1];
+									student[e+1] = temp;
+								}
+							}
+						}
+						for (int k = 0; k < count; k++) {
+							student[k].rank = k + 1;
+						}
+					}
+				} // 학생 삭제
+				else {
+					System.out.println("알림]] 잘못된 번호입니다.");
+				}
+			}
+			catch(Exception e) {
+				System.err.println("알림]] 잘못된 입력입니다.");	
+				
 			}
 		}
+		
 	}
 }
