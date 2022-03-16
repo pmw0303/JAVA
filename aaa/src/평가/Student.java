@@ -1,18 +1,20 @@
 package Æò°¡;
 
-public class Student extends Grade {
+public class Student {
 
 	String name;
-	int kor;
-	int eng;
-	int math;
-
-	public Student(String name, int kor, int eng, int math) {
+	int kor, eng, mat;
+	
+	public Student() {
+		
+	}
+	
+	public Student(String name, int kor, int eng, int mat) {
 		super();
 		this.name = name;
 		this.kor = kor;
 		this.eng = eng;
-		this.math = math;
+		this.mat = mat;
 	}
 
 	public String getName() {
@@ -23,37 +25,30 @@ public class Student extends Grade {
 		this.name = name;
 	}
 
-	public int getkor() {
+	public int getKor() {
 		return kor;
 	}
 
-	public void setkor(int kor) {
+	public void setKor(int kor) {
 		this.kor = kor;
 	}
 
-	public int geteng() {
+	public int getEng() {
 		return eng;
 	}
 
-	public void seteng(int eng) {
+	public void setEng(int eng) {
 		this.eng = eng;
 	}
 
-	public int getMath() {
-		return math;
+	public int getMat() {
+		return mat;
 	}
 
-	public void setMath(int math) {
-		this.math = math;
+	public void setMat(int mat) {
+		this.mat = mat;
 	}
-
-	public int gettotal() {
-		return kor + eng + math;
-	}
-
-	public double getAvg() {
-		double avg = (kor+eng+math)/3;		
-		return avg;
-	}
-
+	
+	
+	
 }
