@@ -16,9 +16,9 @@ public class Exit {
 		try {
 			for(Car temp : carlist) {
 				if(num == temp.getCarNum()) {
-					System.out.println("차량번호\t주차위치\t입차시간\t\t출차시간\t\tㄱ금액");
+					System.out.println("차량번호\t입차시간\t\t출차시간\t\tㄱ금액");
 					System.out.printf("%d\t%d\t%s\t\t%s\t\t%d\n",
-							temp.getCarNum(), temp.getParkArea(), temp.getCarIn()
+							temp.getCarNum(), temp.getCarIn()
 							, temp.getCarOut(), temp.getMoney());
 					System.out.println("출차 하시겠습니까");
 					System.out.println("1.예 2.아니오");

@@ -7,25 +7,34 @@ public class Car {
 	String carNum;
 	String carIn;
 	String carOut;
-	String parkArea;
+	String day;
 	int money;
 	
 	public Car() {} 
 	
-	public Car(String carNum, String parkArea) {
-		this.carNum = carNum;
-		this.parkArea = parkArea;
+	public Car(String carNum) {
+		this.carNum = carNum;	
 	}
 	
-	public Car(String carNum, String carIn, String carOut, String parkArea, int money) {
+	public Car(String day, String carNum, String carIn, String carOut, int money) {
 		super();
+		this.day = day;
 		this.carNum = carNum;
 		this.carIn = carIn;
 		this.carOut = carOut;
-		this.parkArea = parkArea;
 		this.money = money;
 	}
 
+	public Car(ArrayList<Car> carlist, String carNum, String carIn, String carOut, int money, String day) {
+		super();
+		this.carlist = carlist;
+		this.carNum = carNum;
+		this.carIn = carIn;
+		this.carOut = carOut;
+		this.money = money;
+		this.day = day;
+	}
+	
 	public String getCarNum() {
 		return carNum;
 	}
@@ -50,20 +59,20 @@ public class Car {
 		this.carOut = carOut;
 	}
 
-	public String getParkArea() {
-		return parkArea;
-	}
-
-	public void setParkArea(String parkArea) {
-		this.parkArea = parkArea;
-	}
-
 	public int getMoney() {
 		return money;
 	}
 
 	public void setMoney(int money) {
 		this.money = money;
+	}
+
+	public String getDay() {
+		return day;
+	}
+
+	public void setDay(String day) {
+		this.day = day;
 	}
 	
 }
