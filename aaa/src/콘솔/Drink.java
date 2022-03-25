@@ -44,20 +44,9 @@ public class Drink{
 		buy4.start();
 		Controller.화면출력메소드();
 
+		GameOver.Go();
 		
-		
-		System.out.println("Game Over");
-		System.out.println("Game Over");
-		System.out.println("Game Over");
-		System.out.println("Game Over");
-		System.out.println("Game Over");
-		System.out.println("Game Over");
-		System.out.println("Game Over");
-		System.out.println("Game Over");
-		System.out.println("Game Over");
-		System.out.println("Game Over");
-		System.out.println("Game Over");
-		System.out.println("Game Over");
+
 			// 음료구매메소드(인수 : 속도변수  			반환 : X (음료재고에 직접접근하여 재고 차감))     o
 			// 화면출력메소드(인수 : 음료재고, 자금		반환 : X)         o
 			// 시간체크메소드(인수 : 현재시간   			반환 : 속도변수)     o

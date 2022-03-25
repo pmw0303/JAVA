@@ -46,17 +46,18 @@ public class Controller extends Thread{
 					System.out.print  ("  │                                                            │ 	│ 				  │\n");
 					System.out.print  ("  │                                                            │ 	│ 				  │\n");
 					System.out.print  ("  │                                               (|) (─)      │        │                                 │\n");
-		            System.out.print  ("  │       ###  ####   ###  ####  #   # ####        #####       │        │                                 │\n");
-		            System.out.print  ("  │      #   # #   # #   # #   # #   # #   #       #           │        │                                 │\n");
-		            System.out.print  ("  │      # ### ####  #   # ####  #   # ####        ####        │        │                                 │\n");
-		            System.out.print  ("  │      #   # #   # #   # #   # #   # #               #       │        │                                 │\n");
-		            System.out.print  ("  │       #### #   #  ###  #   #  ###  #           ####        │        │                                 │\n");
+		            System.out.print  ("  │       ###  ####   ###  #   # ####              #####       │        │                                 │\n");
+		            System.out.print  ("  │      #   # #   # #   # #   # #   #             ##          │        │                                 │\n");
+		            System.out.print  ("  │      # ### ####  #   # #   # ####              ####        │        │                                 │\n");
+		            System.out.print  ("  │      #   # #   # #   # #   # #                    ##       │        │                                 │\n");
+		            System.out.print  ("  │       #### #   #  ###   ###  #                 ####        │        │                                 │\n");
 					System.out.print  ("  │     ┌────────────────────────────────────────────────┐     │	└─────────────────────────────────┘\n");
 					System.out.println("  │     │                                                │     │ ");
 					System.out.println("  │     │                                                │     │ ");
 					System.out.println("  │     │                                                │     │ ");
 					System.out.println("  │     └────────────────────────────────────────────────┘     │ ");
 					System.out.println("  └────────────────────────────────────────────────────────────┘ ");
+					System.out.println();
 				}
 				else {
 					cls();
@@ -86,17 +87,18 @@ public class Controller extends Thread{
 					System.out.print  ("  │                                                            │ 	│ 				  │\n");
 					System.out.print  ("  │                                                            │ 	│ 				  │\n");
 					System.out.print  ("  │                                               (|) (─)      │        │                                 │\n");
-		            System.out.print  ("  │       ###  ####   ###  ####  #   # ####        #####       │        │                                 │\n");
-		            System.out.print  ("  │      #   # #   # #   # #   # #   # #   #       #           │        │                                 │\n");
-		            System.out.print  ("  │      # ### ####  #   # ####  #   # ####        ####        │        │                                 │\n");
-		            System.out.print  ("  │      #   # #   # #   # #   # #   # #               #       │        │                                 │\n");
-		            System.out.print  ("  │       #### #   #  ###  #   #  ###  #           ####        │        │                                 │\n");
+		            System.out.print  ("  │       ###  ####   ###  #   # ####              #####       │        │                                 │\n");
+		            System.out.print  ("  │      #   # #   # #   # #   # #   #             ##          │        │                                 │\n");
+		            System.out.print  ("  │      # ### ####  #   # #   # ####              ####        │        │                                 │\n");
+		            System.out.print  ("  │      #   # #   # #   # #   # #                    ##       │        │                                 │\n");
+		            System.out.print  ("  │       #### #   #  ###   ###  #                 ####        │        │                                 │\n");
 					System.out.print  ("  │     ┌────────────────────────────────────────────────┐     │	└─────────────────────────────────┘\n");
 					System.out.println("  │     │                                                │     │ ");
 					System.out.println("  │     │                                                │     │ ");
 					System.out.println("  │     │                                                │     │ ");
 					System.out.println("  │     └────────────────────────────────────────────────┘     │ ");
 					System.out.println("  └────────────────────────────────────────────────────────────┘ ");
+					System.out.println();
 				}
 				try {
 					Thread.sleep(160);
@@ -110,11 +112,11 @@ public class Controller extends Thread{
 	public static void 시작화면출력() {
 		for(int i = 0 ; i <= 5 ; i++) {
 			cls();
-			System.out.println("┌────────────────────────────┐");
-			System.out.println("│     자판기에 음료수가 모자라서    │");
-			System.out.println("│     판매하지 못하면 경고입니다    │");
-			System.out.println("│         잘 채워주세요!        │");
-			System.out.println("└────────────────────────────┘");
+			System.out.println("┌───────────────────────────┐");
+			System.out.println("│     자판기에 음료수가 모자라서   │");
+			System.out.println("│     판매하지 못하면 경고입니다   │");
+			System.out.println("│          잘  채우세요        │");
+			System.out.println("└───────────────────────────");
 			if(i==0) {
 				System.out.println();
 				System.out.println();
@@ -161,12 +163,12 @@ public class Controller extends Thread{
 				try {Thread.sleep(1000);}catch(Exception e) {}
 			}
 			else if(i==5) {
+				System.out.println("              ▒▒             ");
 				System.out.println("            ▒▒▒▒             ");
 				System.out.println("              ▒▒             ");
 				System.out.println("              ▒▒             ");
 				System.out.println("              ▒▒             ");
-				System.out.println("              ▒▒             ");
-				System.out.println("          ▒▒▒▒▒▒▒▒▒▒         ");
+				System.out.println("            ▒▒▒▒▒▒         ");
 				try {Thread.sleep(1000);}catch(Exception e) {}
 			}
 		}
