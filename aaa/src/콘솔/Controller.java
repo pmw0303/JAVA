@@ -113,10 +113,10 @@ public class Controller extends Thread{
 		for(int i = 0 ; i <= 5 ; i++) {
 			cls();
 			System.out.println("┌───────────────────────────┐");
-			System.out.println("│     자판기에 음료수가 모자라서   │");
-			System.out.println("│     판매하지 못하면 경고입니다   │");
-			System.out.println("│          잘  채우세요        │");
-			System.out.println("└───────────────────────────");
+			System.out.println("│     자판기에 음료수가 모자라서    │");
+			System.out.println("│     판매하지 못하면 경고입니다    │");
+			System.out.println("│         열심히 채워요         │");
+			System.out.println("└───────────────────────────┘");
 			if(i==0) {
 				System.out.println();
 				System.out.println();
