@@ -1,5 +1,4 @@
-package 콘솔;
-
+package 자판기;
 
 
 import java.io.BufferedInputStream;
@@ -8,7 +7,7 @@ import java.io.FileInputStream;
 
 import javazoom.jl.player.Player;
 
-public class Music extends Thread{
+public class Music extends Thread{ // 외부 api javazoom 사이트 에서 wav파일만 읽을수있는데 mp3 파일도 바로 읽을수 있게 해주는 api
 
 	private Player player;
 	private boolean isLoop;// 곡이 무한반복인지 한번만 재생되는지 설정
@@ -16,11 +15,12 @@ public class Music extends Thread{
 	private FileInputStream fis;
 	private BufferedInputStream bis;
 	
-	public Music(String name,boolean isloop) {//생성자
+	public Music(String name, boolean isLoop) {//생성자
 		// 곡의 제목과 무한반복인지의 유무
 		try {// 예외처리
 			this.isLoop = isLoop; //isLoop 변수초기화
-			file = new File(test.class.getResource("../music/" + name).toURI());
+			file = new File(Drink.class.getResource("../music/" + name).toURI()); //getResource()
+			// , getResourceAsStream()을 쓰면 jar로 패키징된 내부 파일을 직접 읽을 수 있다
 			fis = new FileInputStream(file);
 			bis = new BufferedInputStream(fis);
 			player = new Player(bis);
